@@ -1,18 +1,234 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    tools:context=".DiaryForm">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/today_date"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="2023년 2월 2일"
+                    android:textSize="22sp" />
+
+                <Button
+                    android:layout_height="30dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_width="30dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:layout_width="wrap_content"
+                android:text="당신의 식사를 기록해보세요!"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="오늘의 사진 선택하기"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="복수선택 가능"
+                android:textSize="14sp" />
+
+            <Button
+                android:layout_height="100dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="100dp" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="태그 선택하기"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="해당되는 태그를 선택해 보세요"
+                android:textSize="14sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content">
+
+                <Button
+                    android:id="@+id/tag_morning"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="wrap_content" />
+
+                <Button
+                    android:id="@+id/tag_lunch"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/tag_morning" />>
+
+                <Button
+                    android:id="@+id/tag_dinner"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/tag_lunch" />>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="무엇을 먹었나요?"
+                android:textSize="16sp" />
+
+            <EditText
+                android:background="#EAEAEA"
+                android:gravity="top"
+                android:layout_height="100dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:text="100자 이내" />
+
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="어디에서 먻었나요?"
+                android:textSize="16sp" />
+
+            <EditText
+                android:background="#EAEAEA"
+                android:gravity="top"
+                android:layout_height="100dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:text="100자 이내" />
+
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="누구와 먹었나요?"
+                android:textSize="16sp" />
+
+            <EditText
+                android:background="#EAEAEA"
+                android:gravity="top"
+                android:layout_height="100dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:text="100자 이내" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="이번 식사는 어떤 기분이었나요?"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_width="wrap_content"
+                android:text="해당되는 감정 이모지를 선택해보세요"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="자유롭게 더 기록하기?"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="오늘 느낀 기분을 자유롭게 작성해보세요"
+                android:textSize="14sp" />
+
+
+            <EditText
+                android:background="#EAEAEA"
+                android:gravity="top"
+                android:layout_height="300dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="공개여부"
+            android:layout_marginStart="20dp"
+            android:id="@+id/text_yn"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+            <RadioButton
+                android:id="@+id/radio_f"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="친구공개"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:id="@+id/radio_none"
+                app:layout_constraintStart_toEndOf="@id/radio_f"
+                android:text="비공개"
+                app:layout_constraintEnd_toStartOf="@id/radio_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                app:layout_constraintStart_toEndOf="@id/radio_none"
+                android:id="@+id/radio_all"
+app:layout_constraintEnd_toStartOf="@id/button_done"
+                android:text="전체공개"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/button_done"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

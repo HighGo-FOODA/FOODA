@@ -1,4 +1,11 @@
 package com.example.fooda
 
-class DiaryForm {
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+
+class DiaryForm : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.diary_form)
+    }
 }
