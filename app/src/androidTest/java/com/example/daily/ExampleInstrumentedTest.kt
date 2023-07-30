@@ -1,4 +1,4 @@
-package com.example.fooda
+package com.example.daily
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.example.fooda", appContext.packageName)
+        assertEquals("com.example.daily", appContext.packageName)
     }
 }

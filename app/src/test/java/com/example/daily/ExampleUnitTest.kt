@@ -1,4 +1,4 @@
-package com.example.fooda
+package com.example.daily
 
 import org.junit.Test
 
