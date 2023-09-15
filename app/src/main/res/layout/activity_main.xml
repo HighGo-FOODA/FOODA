@@ -1,4 +1,5 @@
-<androidx.constraintlayout.widget.ConstraintLayout
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,79 +8,51 @@
     tools:context=".MainActivity">
 
     <FrameLayout
-        android:id="@+id/appBarFrameLayout"
+        android:id="@+id/appbarFrameLayout"
         android:layout_width="match_parent"
-        android:layout_height="72dp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_gravity="top"
+        android:layout_height="72dp"/>
 
-        />
-
+<!--FIXME 실제 페이지 어떻게 될지 모름, 확인하고 수정할 것-->
     <FrameLayout
         android:id="@+id/mainFrameLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/appBarFrameLayout"
-     />
+        android:layout_height="0dp"/>
 
-    <!--FIXME : 하단바 백그라운드가 FAFAFA 가 맞는가?-->
+<!--FIXME fab관련 수치 뇌피셜-->
+<!--FIXME 네비게이션 바 좌우 padd기ng margin , 간격 수치 안 지킴-->
+    <!--FIXME 백그라운드 컬러 체크하기-->
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        app:elevation="0dp"
-
-
-        app:fabCradleMargin="10dp"
-        app:fabCradleRoundedCornerRadius="10dp"
-
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:ignore="BottomAppBar"
-        >
-
+        app:fabCradleMargin="3dp"
+        app:fabCradleRoundedCornerRadius="5dp"
+        app:fabCradleVerticalOffset="10dp">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigationView"
             android:layout_width="match_parent"
-            android:layout_height="81dp"
-            android:layout_gravity="bottom"
-            android:background="#FAFAFA"
-            app:elevation="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:labelVisibilityMode="labeled"
             app:itemIconTint="@drawable/menu_click_color"
             app:itemTextAppearanceActive="@style/Text_H8"
             app:itemTextColor="@drawable/menu_click_color"
-            app:labelVisibilityMode="labeled"
-            app:menu="@menu/menu_item"
-android:layout_marginRight="16dp"
-            />
+            android:background="@android:color/transparent"
+            app:menu="@menu/menu_item" />
 
     </com.google.android.material.bottomappbar.BottomAppBar>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floating_btn_write"
+        android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="기록하기 버튼"
+        android:contentDescription="@string/app_name"
         android:src="@drawable/ic_write"
-        android:clickable="true"
-        android:tint="@color/Beige4"
-        android:visibility="visible"
-        app:backgroundTint="@null"
-        app:backgroundTintMode="@null"
-        app:elevation="0dp"
-        app:fabCustomSize="68dp"
-        app:fabSize="normal"
-        app:layout_anchor="@id/bottomAppBar"
-        app:layout_constraintBottom_toTopOf="@id/bottomAppBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/bottomAppBar"
+        app:tint="@null"
         app:maxImageSize="68dp"
-        app:rippleColor="@color/Beige2"
-        tools:visibility="visible" />
+        app:layout_anchor="@id/bottomAppBar" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

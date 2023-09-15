@@ -30,7 +30,7 @@ class MainActivity: AppCompatActivity(){
         setContentView(binding.root)
 
 
-//플로팅 버튼을 위한 과정
+//xml 그림자 잡아주는
         binding.bottomNavigationView.background = null
 
 
