@@ -6,10 +6,10 @@
 
 
     <style name="Theme.FOODA" parent="Theme.MaterialComponents.Light">
-<!--FIXME : 임의로 해놓은 것 (플로팅 버튼 색상 등)-->
-        <item name="colorPrimary">@color/Beige3</item>
-        <item name="colorPrimaryDark">@color/DarkBrown</item>
-        <item name="colorAccent">@color/White</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+<!--        상태 바 없애기-->
+<!--        <item name="android:windowFullscreen">true</item>-->
     </style>
 
 </resources>
