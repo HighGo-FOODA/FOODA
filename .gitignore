@@ -149,6 +149,10 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+#맥북
+.DS_Store
+app/.DS_Store
+
 ### AndroidStudio Patch ###
 
 !/gradle/wrapper/gradle-wrapper.jar
