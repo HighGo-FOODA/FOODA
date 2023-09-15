@@ -2,9 +2,14 @@
 <resources>
 
 <!--    <style name="Theme.FOODA" parent="android:Theme.Material.Light.NoActionBar" />-->
+<!--    <style name="Theme.FOODA" parent="Theme.AppCompat.Light.DarkActionBar">-->
 
-    <style name="Theme.FOODA" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- 기존 스타일 내용 -->
+
+    <style name="Theme.FOODA" parent="Theme.MaterialComponents.Light">
+<!--FIXME : 임의로 해놓은 것 (플로팅 버튼 색상 등)-->
+        <item name="colorPrimary">@color/Beige3</item>
+        <item name="colorPrimaryDark">@color/DarkBrown</item>
+        <item name="colorAccent">@color/White</item>
     </style>
 
 </resources>

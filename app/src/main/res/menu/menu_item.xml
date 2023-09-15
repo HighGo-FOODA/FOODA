@@ -12,8 +12,13 @@
         android:title="아카이브" />
 
     <item
+        android:id="@+id/placeholder"
+        android:enabled="false"
+        android:title="" />
+
+    <item
         android:id="@+id/menu_community"
-        android:icon="@drawable/ic_logo"
+        android:icon="@drawable/ic_community"
         android:title="커뮤니티" />
 
     <item

@@ -30,6 +30,10 @@ class MainActivity: AppCompatActivity(){
         setContentView(binding.root)
 
 
+//플로팅 버튼을 위한 과정
+        binding.bottomNavigationView.background = null
+
+
         setFragment(TAG_HOME, HomeFragment())
 
         binding.bottomNavigationView.setOnItemSelectedListener { item ->
