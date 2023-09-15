@@ -20,8 +20,14 @@
     android:layout_height="wrap_content"
     app:menu="@menu/menu_item"
         android:background="@color/White"
+        app:itemIconTint="@drawable/menu_click_color"
+        app:itemTextColor="@drawable/menu_click_color"
     app:layout_constraintBottom_toBottomOf="parent"
-    />
+        app:labelVisibilityMode="labeled"
+        app:itemTextAppearanceActive="@style/Text_H8"
+
+
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

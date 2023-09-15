@@ -52,4 +52,8 @@
         <item name="android:lineSpacingMultiplier">1.50</item>
         <item name = "android:textColor">@color/Grey600</item>
     </style>
+
+
+
+
 </resources>
