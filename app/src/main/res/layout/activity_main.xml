@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="72dp"/>
 
-<!--FIXME 실제 페이지 어떻게 될지 모름, 확인하고 수정할 것-->
+<!--FIXME 실제 페이지 어떻게 될지 모름, 확인하고 수정할 것, coordinator에 맞게-->
     <FrameLayout
         android:id="@+id/mainFrameLayout"
         android:layout_width="match_parent"
