@@ -16,7 +16,9 @@
     <FrameLayout
         android:id="@+id/mainFrameLayout"
         android:layout_width="match_parent"
-        android:layout_height="0dp"/>
+        android:layout_height="match_parent"
+
+        />
 
 <!--FIXME fab관련 수치 뇌피셜-->
 <!--FIXME 네비게이션 바 좌우 padd기ng margin , 간격 수치 안 지킴-->
@@ -46,7 +48,7 @@
     </com.google.android.material.bottomappbar.BottomAppBar>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/fabWrite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/app_name"

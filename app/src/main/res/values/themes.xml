@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-<!--    <style name="Theme.FOODA" parent="android:Theme.Material.Light.NoActionBar" />-->
-<!--    <style name="Theme.FOODA" parent="Theme.AppCompat.Light.DarkActionBar">-->
+    <!--    <style name="Theme.FOODA" parent="android:Theme.Material.Light.NoActionBar" />-->
+    <!--    <style name="Theme.FOODA" parent="Theme.AppCompat.Light.DarkActionBar">-->
 
 
     <style name="Theme.FOODA" parent="Theme.MaterialComponents.Light">
@@ -11,9 +11,18 @@
         <item name="colorOnPrimary">@color/DarkBrown</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-<!--        상태 바 없애기-->
-<!--        <item name="android:windowFullscreen">true</item>-->
+        <!--        상태 바 없애기-->
+        <!--        <item name="android:windowFullscreen">true</item>-->
 
     </style>
+
+    <style name="Theme.FOODA.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.FOODA.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.FOODA.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

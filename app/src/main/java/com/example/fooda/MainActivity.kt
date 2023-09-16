@@ -1,6 +1,7 @@
 package com.example.fooda
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -29,10 +30,8 @@ class MainActivity: AppCompatActivity(){
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
 //xml 그림자 잡아주는
         binding.bottomNavigationView.background = null
-
 
         setFragment(TAG_HOME, HomeFragment())
 
@@ -46,6 +45,10 @@ class MainActivity: AppCompatActivity(){
             }
             true
         }
+
+        val intent = Intent(this, DailyWriteActivity::class.java)
+        binding.fabWrite.setOnClickListener{startActivity(intent)}
+
     }
 
     private fun setFragment(tag: String, fragment: Fragment) {
