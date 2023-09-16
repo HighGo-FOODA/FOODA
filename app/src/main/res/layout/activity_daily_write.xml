@@ -1,49 +1,564 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--TODO : 화면 전환 애니메이션 적용 (위에서 아래로?) (현재는 옆으로 전환)-->
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
+    android:orientation="vertical"
     tools:context=".DailyWriteActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/app_bar"
+    <!--TODO toolbar은 이 coordinat-에서 빠져야..? 없어지지 않는 고정 이므로  ++ include? fragment-->
+    <FrameLayout
+        android:id="@+id/appbarFrameLayout"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/app_bar_height"
-        android:fitsSystemWindows="true"
-        android:theme="@style/Theme.FOODA.AppBarOverlay">
+        android:layout_height="72dp" />
 
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/toolbar_layout"
-            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fitsSystemWindows="true"
-            app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:toolbarId="@+id/toolbar">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"
-                app:popupTheme="@style/Theme.FOODA.PopupOverlay" />
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:orientation="horizontal">
 
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-    </com.google.android.material.appbar.AppBarLayout>
+                <TextView
+                    android:id="@+id/textDate"
+                    style="@style/Text_H2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2023년 2월 2일" />
 
-    <include layout="@layout/content_scrolling" />
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:maxWidth="24dp"
+                    android:maxHeight="24dp"
+                    android:src="@drawable/ic_calendar" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/fab_margin"
-        app:layout_anchor="@id/app_bar"
-        app:layout_anchorGravity="bottom|end"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+            </LinearLayout>
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+            <TextView
+                android:id="@+id/textNth"
+
+                style="@style/Text_H2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:text="첫번째 기록" />
+
+            <TextView
+                style="@style/Text_H6"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:text="오늘의 푸다를 기록해보세요!" />
+
+            <TextView
+                style="@style/Text_H4"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:text="오늘의 사진 선택하기" />
+
+            <TextView
+                style="@style/Text_H7"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:text="오늘의 식사가 담긴 사진을 선택해 보세요" />
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent"
+                android:layout_marginStart="21dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <!--FIXME 버튼 디자인 없어서 임의로 진행-->
+                    <ImageButton
+                        android:id="@+id/imageAddButton"
+                        android:layout_width="135dp"
+                        android:layout_height="135dp"
+                        android:layout_weight="1"
+                        android:background="@color/Beige2"
+                        app:srcCompat="@drawable/ic_write" />
+
+                    <!--TODO 가로 스크롤 잘 되는 것 확인함 -> 이미지 뷰 추가하기-->
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="14dp"
+                android:background="#f4f4f4" />
+
+            <TextView
+                style="@style/Text_H4"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:text="시간 선택하기" />
+
+            <TextView
+                style="@style/Text_H7"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:text="해당되는 태그를 선택해 보세요." />
+
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center"
+                app:chipSpacing="8dp"
+                app:chipSpacingVertical="13dp"
+                app:singleLine="false">
+
+                <!--FIXME Chip 디자인 디테일 (마진 같은 거), 그룹 내 정렬 -->
+                <!--FIXME font 스타일 가이드 아님?? 임시로 폰트 페말리 레귤러로 진행-->
+                <com.google.android.material.chip.Chip
+                    android:layout_width="82dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendardregular"
+                    android:text="@string/tagDailyTime1"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/chip_click_txt_color"
+                    android:textSize="16sp"
+                    app:chipBackgroundColor="@drawable/chip_click_bg_color" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="82dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendardregular"
+                    android:text="@string/tagDailyTime2"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/chip_click_txt_color"
+                    android:textSize="16sp"
+                    app:chipBackgroundColor="@drawable/chip_click_bg_color" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="82dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendardregular"
+                    android:text="@string/tagDailyTime3"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/chip_click_txt_color"
+                    android:textSize="16sp"
+                    app:chipBackgroundColor="@drawable/chip_click_bg_color" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="82dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendardregular"
+                    android:text="@string/tagDailyTime4"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/chip_click_txt_color"
+                    android:textSize="16sp"
+                    app:chipBackgroundColor="@drawable/chip_click_bg_color" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="82dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendardregular"
+                    android:text="@string/tagDailyTime5"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/chip_click_txt_color"
+                    android:textSize="16sp"
+                    app:chipBackgroundColor="@drawable/chip_click_bg_color" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="14dp"
+                android:background="#f4f4f4"
+                />
+
+            <TextView
+                style="@style/Text_H4"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:text="무엇을 먹었나요?" />
+
+            <!--레이아웃 겹쳐서 배치 할 때는 프레임 레이아웃~!-->
+            <!--FIXME margin start 와 left는 다르네?? 왜지?? 통일 시켜야 하나??-->
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="21dp"
+                android:layout_marginRight="20dp">
+
+                <EditText
+                    style="@style/Text_H6"
+                    android:layout_width="match_parent"
+                    android:layout_height="89dp"
+                    android:background="@color/Beige1"
+                    android:gravity="top"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="12dp"
+                    android:text="오늘 먹은 음식을 적어보세요!"
+                    android:textColor="@color/Beige3" />
+
+<!--TODO 커스텀 해서 따로 xml 파일로 만들기-->
+                <ProgressBar
+                    android:layout_marginBottom="9dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="bottom|right" />
+            </FrameLayout>
+
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center"
+                app:chipSpacing="8dp"
+                app:chipSpacingVertical="13dp"
+                app:singleLine="false">
+
+                <!--FIXME Chip 디자인 디테일 (마진 같은 거), 그룹 내 정렬 -->
+                <!--FIXME font 스타일 가이드 아님?? 임시로 폰트 페말리 레귤러로 진행-->
+                <com.google.android.material.chip.Chip
+                    android:layout_width="82dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendardregular"
+                    android:text="@string/tagDailyCategory1"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/chip_click_txt_color"
+                    android:textSize="16sp"
+                    app:chipBackgroundColor="@drawable/chip_click_bg_color" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="82dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendardregular"
+                    android:text="@string/tagDailyCategory2"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/chip_click_txt_color"
+                    android:textSize="16sp"
+                    app:chipBackgroundColor="@drawable/chip_click_bg_color" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="82dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendardregular"
+                    android:text="@string/tagDailyCategory3"
+
+                    android:textAlignment="center"
+                    android:textColor="@drawable/chip_click_txt_color"
+                    android:textSize="16sp"
+                    app:chipBackgroundColor="@drawable/chip_click_bg_color" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="82dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendardregular"
+                    android:text="@string/tagDailyCategory4"
+
+                    android:textAlignment="center"
+                    android:textColor="@drawable/chip_click_txt_color"
+                    android:textSize="16sp"
+                    app:chipBackgroundColor="@drawable/chip_click_bg_color" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="82dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendardregular"
+                    android:text="@string/tagDailyCategory5"
+
+                    android:textAlignment="center"
+                    android:textColor="@drawable/chip_click_txt_color"
+                    android:textSize="16sp"
+                    app:chipBackgroundColor="@drawable/chip_click_bg_color" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="82dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendardregular"
+                    android:text="@string/tagDailyCategory6"
+
+                    android:textAlignment="center"
+                    android:textColor="@drawable/chip_click_txt_color"
+                    android:textSize="16sp"
+                    app:chipBackgroundColor="@drawable/chip_click_bg_color" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="14dp"
+                android:background="#f4f4f4"
+                />
+
+            <TextView
+                android:layout_marginLeft="21dp"
+                style="@style/Text_H4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="어디에서 먹었나요?" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="21dp"
+                android:layout_marginRight="20dp">
+
+                <EditText
+                    style="@style/Text_H6"
+                    android:layout_width="match_parent"
+                    android:layout_height="89dp"
+                    android:background="@color/Beige1"
+                    android:gravity="top"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="12dp"
+                    android:text="음식을 먹었던 공간을 적어보세요!"
+                    android:textColor="@color/Beige3" />
+
+                <!--TODO 커스텀 해서 따로 xml 파일로 만들기-->
+                <ProgressBar
+                    android:layout_marginBottom="9dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="bottom|right" />
+            </FrameLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="14dp"
+                android:background="#f4f4f4"
+                />
+
+            <TextView
+                android:layout_marginLeft="21dp"
+                style="@style/Text_H4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="그곳의 분위기는 어땠나요?" />
+            <TextView
+                android:layout_marginLeft="21dp"
+                style="@style/Text_H7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="태그를 작성해보세요." />
+<!--TODO 여기 태그 하나하나 파싱해야하는 부분인거야????????-->
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="21dp"
+                android:layout_marginRight="20dp">
+
+                <EditText
+                    style="@style/Text_H6"
+                    android:layout_width="match_parent"
+                    android:layout_height="89dp"
+                    android:background="@color/Beige1"
+                    android:gravity="top"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="12dp"
+                    android:text="#신비한 #따뜻한 .."
+                    android:textColor="@color/Beige3" />
+
+                <!--TODO 커스텀 해서 따로 xml 파일로 만들기-->
+                <ProgressBar
+                    android:layout_marginBottom="9dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="bottom|right" />
+            </FrameLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="14dp"
+                android:background="#f4f4f4"
+                />
+
+            <TextView
+                android:layout_marginLeft="21dp"
+                style="@style/Text_H4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="누구와 먹었나요?" />
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="21dp"
+                android:layout_marginRight="20dp">
+
+                <EditText
+                    style="@style/Text_H6"
+                    android:layout_width="match_parent"
+                    android:layout_height="89dp"
+                    android:background="@color/Beige1"
+                    android:gravity="top"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="12dp"
+                    android:text="함께 했던 사람을 적어보세요!"
+                    android:textColor="@color/Beige3" />
+
+                <!--TODO 커스텀 해서 따로 xml 파일로 만들기-->
+                <ProgressBar
+                    android:layout_marginBottom="9dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="bottom|right" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="14dp"
+                android:background="#f4f4f4"
+                />
+
+            <TextView
+                android:layout_marginLeft="21dp"
+                style="@style/Text_H4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이번 식사는 어떤 기분이었나요?" />
+
+            <TextView
+                android:layout_marginLeft="21dp"
+                style="@style/Text_H7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="해당되는 감정 이모지를 선택해보세요." />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+<!--TODO : 이미지 클릭 시 색 잘 바뀌는지 확인 해야함 + 이미지 클릭으로 텍스트까지 영향이 가야함-->
+                    <ImageView
+                        android:clickable="true"
+                        android:id="@+id/dailyWriteHappy"
+                        android:src="@drawable/illust_happy"
+                        android:layout_width="53dp"
+                        android:layout_height="53dp"/>
+                    <TextView
+                        style="@style/Text_H7"
+                        android:textColor="@color/Pink"
+                        android:text="@string/illustHappy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="14dp"
+                android:background="#f4f4f4"
+                />
+
+
+
+            <TextView
+                style="@style/Text_H4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="자유롭게 더 기록하기" />
+
+            <TextView
+                style="@style/Text_H7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오늘 느낀 기분을 자유롭게 작성해보세요" />
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="21dp"
+                android:layout_marginRight="20dp">
+
+                <EditText
+                    style="@style/Text_H6"
+                    android:layout_width="match_parent"
+                    android:layout_height="323dp"
+                    android:background="@color/Beige1"
+                    android:gravity="top"
+                />
+
+                <!--TODO 커스텀 해서 따로 xml 파일로 만들기-->
+                <ProgressBar
+                    android:layout_marginBottom="9dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="bottom|right" />
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+       <Switch
+           android:text="공개"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+
+        <TextView
+            android:clickable="true"
+            android:text="임시저장"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+<!--FIXME 스타일 가이드 없는 색-->
+    <item android:state_selected="false" android:color="#eaeaea"/>
+
+</selector>

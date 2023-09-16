@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!--TODO toolbar은 이 coordinat-에서 빠져야..? 없어지지 않는 고정 이므로  ++ include? fragment-->
     <FrameLayout
         android:id="@+id/appbarFrameLayout"
         android:layout_width="match_parent"
-        android:layout_height="72dp"/>
+        android:layout_height="72dp" />
 
-<!--FIXME 실제 페이지 어떻게 될지 모름, 확인하고 수정할 것, coordinator에 맞게-->
+    <!--FIXME 실제 페이지 어떻게 될지 모름, 확인하고 수정할 것, coordinator에 맞게-->
+
+    <!--FIXME fab관련 수치 뇌피셜-->
+    <!--FIXME 네비게이션 바 좌우 padd기ng margin , 간격 수치 안 지킴-->
+    <!--FIXME 백그라운드 컬러 체크하기-->
+
     <FrameLayout
         android:id="@+id/mainFrameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
         />
-
-<!--FIXME fab관련 수치 뇌피셜-->
-<!--FIXME 네비게이션 바 좌우 padd기ng margin , 간격 수치 안 지킴-->
-    <!--FIXME 백그라운드 컬러 체크하기-->
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
@@ -38,11 +39,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            app:labelVisibilityMode="labeled"
+            android:background="@android:color/transparent"
             app:itemIconTint="@drawable/menu_click_color"
             app:itemTextAppearanceActive="@style/Text_H8"
             app:itemTextColor="@drawable/menu_click_color"
-            android:background="@android:color/transparent"
+            app:labelVisibilityMode="labeled"
             app:menu="@menu/menu_item" />
 
     </com.google.android.material.bottomappbar.BottomAppBar>
@@ -53,8 +54,8 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/app_name"
         android:src="@drawable/ic_write"
-        app:tint="@null"
+        app:layout_anchor="@id/bottomAppBar"
         app:maxImageSize="68dp"
-        app:layout_anchor="@id/bottomAppBar" />
+        app:tint="@null" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
