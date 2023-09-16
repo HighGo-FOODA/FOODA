@@ -18,11 +18,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:scrollbarAlwaysDrawVerticalTrack="true"
-        android:scrollbarFadeDuration="0"
-        android:scrollbarSize="2dp"
-        android:scrollbarThumbVertical="@drawable/ic_scroll">
-<!--FIXME 스크롤바 세로 길이는 커스텀이 어려움 -> 페이지 양에 따라 비율로 자동 설정되기 때문에-->
+        style="@style/scroll_custom"
+        >
+<!--FIXME 스크롤바 세로 길이는 커스텀이 어려움 -> 페이지 양에 따라 비율로 자동 설정되기 때문에 && 항시 노출을 원하는 것이 맞는지-->
 <!--TODO 스크롤 바 옆의 텍스트 풍선-->
 
         <LinearLayout

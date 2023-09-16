@@ -55,7 +55,12 @@
 
     <!--스크롤 커스텀-->
     <style name="scroll_custom">
+
         <item name="android:scrollbarThumbVertical">@drawable/ic_scroll</item>
+        <item name="android:scrollbarSize">2dp</item>
+        <item name="android:scrollbarFadeDuration">0</item>
+        <item name="android:scrollbarAlwaysDrawVerticalTrack">true</item>
+
     </style>
 
 </resources>
