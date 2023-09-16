@@ -9,6 +9,7 @@
         <item name="colorPrimary">@color/Beige2</item>
         <item name="colorPrimaryVariant">@color/Beige3</item>
         <item name="colorOnPrimary">@color/DarkBrown</item>
+        <item name="colorAccent">@color/Beige4</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <!--        상태 바 없애기-->
