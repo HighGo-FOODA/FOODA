@@ -13,6 +13,9 @@
         <item name="windowNoTitle">true</item>
         <!--        상태 바 없애기-->
         <!--        <item name="android:windowFullscreen">true</item>-->
+<!--상태바 스타일 변경-->
+        <item name="android:statusBarColor">@color/White </item>
+        <item name="android:windowLightStatusBar">true</item>
 
     </style>
 

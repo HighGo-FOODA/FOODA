@@ -26,6 +26,7 @@ class DailyWriteActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         //FIXME 은근 로딩이 느리다
+        //FIXME 비디오 업로드 안되게 막기
         val pickMultipleMedia =
             registerForActivityResult(ActivityResultContracts.PickMultipleVisualMedia(5)) { uris ->
                 if (uris.isNotEmpty()) {
