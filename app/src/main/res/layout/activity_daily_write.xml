@@ -40,6 +40,8 @@
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="7dp"
                     android:background="@null"
                     android:maxWidth="24dp"
                     android:maxHeight="24dp"
@@ -49,7 +51,6 @@
 
             <TextView
                 android:id="@+id/textNth"
-
                 style="@style/Text_H2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -58,15 +59,15 @@
 
             <TextView
                 style="@style/Text_H6"
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="21dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="54dp"
                 android:text="오늘의 푸다를 기록해보세요!" />
 
             <TextView
                 style="@style/Text_H4"
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="21dp"
@@ -78,7 +79,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="21dp"
-                android:text="오늘의 식사가 담긴 사진을 선택해 보세요" />
+                android:layout_marginBottom="30dp"
+                android:text="오늘의 식사가 담긴 사진을 선택해 보세요." />
 
 
             <HorizontalScrollView
@@ -98,7 +100,8 @@
                         android:layout_width="135dp"
                         android:layout_height="135dp"
                         android:layout_weight="1"
-                        android:background="@color/Beige2"
+                        android:background="@drawable/rounded_7"
+                        android:backgroundTint="@color/Beige2"
                         app:srcCompat="@drawable/ic_write" />
 
                     <!--TODO 가로 스크롤 잘 되는 것 확인함 -> 이미지 뷰 추가하기-->
@@ -110,12 +113,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="32dp"
                 android:layout_marginRight="14dp"
+                android:layout_marginBottom="32dp"
                 android:background="#f4f4f4" />
 
             <TextView
                 style="@style/Text_H4"
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="21dp"
@@ -132,6 +136,9 @@
             <com.google.android.material.chip.ChipGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="30dp"
                 android:clickable="true"
                 android:gravity="center"
                 app:chipSpacing="8dp"
@@ -196,16 +203,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="32dp"
                 android:layout_marginRight="14dp"
-                android:background="#f4f4f4"
-                />
+                android:layout_marginBottom="32dp"
+                android:background="#f4f4f4" />
 
             <TextView
                 style="@style/Text_H4"
                 android:layout_width="wrap_content"
-
                 android:layout_height="wrap_content"
                 android:layout_marginStart="21dp"
+                android:layout_marginBottom="4dp"
                 android:text="무엇을 먹었나요?" />
 
             <!--레이아웃 겹쳐서 배치 할 때는 프레임 레이아웃~!-->
@@ -221,25 +229,30 @@
                     style="@style/Text_H6"
                     android:layout_width="match_parent"
                     android:layout_height="89dp"
-                    android:background="@color/Beige1"
+                    android:background="@drawable/rounded_7"
+                    android:backgroundTint="@color/Beige1"
                     android:gravity="top"
                     android:paddingLeft="16dp"
                     android:paddingTop="12dp"
                     android:text="오늘 먹은 음식을 적어보세요!"
                     android:textColor="@color/Beige3" />
 
-<!--TODO 커스텀 해서 따로 xml 파일로 만들기-->
+                <!--TODO 커스텀 해서 따로 xml 파일로 만들기-->
                 <ProgressBar
-                    android:layout_marginBottom="9dp"
-                    android:layout_marginEnd="10dp"
                     android:layout_width="14dp"
                     android:layout_height="14dp"
-                    android:layout_gravity="bottom|right" />
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="9dp" />
             </FrameLayout>
 
+            <!--FIXME 위아래 칩 그룹의 정렬 디자인 다름-->
             <com.google.android.material.chip.ChipGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginRight="30dp"
                 android:clickable="true"
                 android:gravity="center"
                 app:chipSpacing="8dp"
@@ -318,28 +331,31 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="32dp"
                 android:layout_marginRight="14dp"
-                android:background="#f4f4f4"
-                />
+                android:layout_marginBottom="32dp"
+                android:background="#f4f4f4" />
 
             <TextView
-                android:layout_marginLeft="21dp"
                 style="@style/Text_H4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
                 android:text="어디에서 먹었나요?" />
 
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="21dp"
+                android:layout_marginTop="9dp"
                 android:layout_marginRight="20dp">
 
                 <EditText
                     style="@style/Text_H6"
                     android:layout_width="match_parent"
                     android:layout_height="89dp"
-                    android:background="@color/Beige1"
+                    android:background="@drawable/rounded_7"
+                    android:backgroundTint="@color/Beige1"
                     android:gravity="top"
                     android:paddingLeft="16dp"
                     android:paddingTop="12dp"
@@ -348,45 +364,50 @@
 
                 <!--TODO 커스텀 해서 따로 xml 파일로 만들기-->
                 <ProgressBar
-                    android:layout_marginBottom="9dp"
-                    android:layout_marginEnd="10dp"
                     android:layout_width="14dp"
                     android:layout_height="14dp"
-                    android:layout_gravity="bottom|right" />
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="9dp" />
             </FrameLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="32dp"
                 android:layout_marginRight="14dp"
-                android:background="#f4f4f4"
-                />
+                android:layout_marginBottom="32dp"
+                android:background="#f4f4f4" />
 
             <TextView
-                android:layout_marginLeft="21dp"
                 style="@style/Text_H4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="그곳의 분위기는 어땠나요?" />
-            <TextView
                 android:layout_marginLeft="21dp"
+                android:text="그곳의 분위기는 어땠나요?" />
+
+            <TextView
                 style="@style/Text_H7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
                 android:text="태그를 작성해보세요." />
-<!--TODO 여기 태그 하나하나 파싱해야하는 부분인거야????????-->
+            <!--TODO 여기 태그 하나하나 파싱해야하는 부분인거야????????-->
 
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="21dp"
+                android:layout_marginTop="12dp"
                 android:layout_marginRight="20dp">
 
                 <EditText
                     style="@style/Text_H6"
                     android:layout_width="match_parent"
                     android:layout_height="89dp"
-                    android:background="@color/Beige1"
+                    android:background="@drawable/rounded_7"
+                    android:backgroundTint="@color/Beige1"
                     android:gravity="top"
                     android:paddingLeft="16dp"
                     android:paddingTop="12dp"
@@ -395,25 +416,27 @@
 
                 <!--TODO 커스텀 해서 따로 xml 파일로 만들기-->
                 <ProgressBar
-                    android:layout_marginBottom="9dp"
-                    android:layout_marginEnd="10dp"
                     android:layout_width="14dp"
                     android:layout_height="14dp"
-                    android:layout_gravity="bottom|right" />
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="9dp" />
             </FrameLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="32dp"
                 android:layout_marginRight="14dp"
-                android:background="#f4f4f4"
-                />
+                android:layout_marginBottom="32dp"
+                android:background="#f4f4f4" />
 
             <TextView
-                android:layout_marginLeft="21dp"
                 style="@style/Text_H4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
                 android:text="누구와 먹었나요?" />
 
 
@@ -421,13 +444,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="21dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginRight="20dp">
 
                 <EditText
                     style="@style/Text_H6"
                     android:layout_width="match_parent"
                     android:layout_height="89dp"
-                    android:background="@color/Beige1"
+                    android:background="@drawable/rounded_7"
+                    android:backgroundTint="@color/Beige1"
                     android:gravity="top"
                     android:paddingLeft="16dp"
                     android:paddingTop="12dp"
@@ -436,82 +461,89 @@
 
                 <!--TODO 커스텀 해서 따로 xml 파일로 만들기-->
                 <ProgressBar
-                    android:layout_marginBottom="9dp"
-                    android:layout_marginEnd="10dp"
                     android:layout_width="14dp"
                     android:layout_height="14dp"
-                    android:layout_gravity="bottom|right" />
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="9dp" />
             </FrameLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="32dp"
                 android:layout_marginRight="14dp"
-                android:background="#f4f4f4"
-                />
+                android:layout_marginBottom="32dp"
+                android:background="#f4f4f4" />
 
             <TextView
-                android:layout_marginLeft="21dp"
                 style="@style/Text_H4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
                 android:text="이번 식사는 어떤 기분이었나요?" />
 
             <TextView
-                android:layout_marginLeft="21dp"
                 style="@style/Text_H7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:layout_marginBottom="26dp"
                 android:text="해당되는 감정 이모지를 선택해보세요." />
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:orientation="horizontal">
+
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-<!--TODO : 이미지 클릭 시 색 잘 바뀌는지 확인 해야함 + 이미지 클릭으로 텍스트까지 영향이 가야함-->
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!--TODO : 이미지 클릭 시 색 잘 바뀌는지 확인 해야함 + 이미지 클릭으로 텍스트까지 영향이 가야함-->
                     <ImageView
-                        android:clickable="true"
                         android:id="@+id/dailyWriteHappy"
-                        android:src="@drawable/illust_happy"
                         android:layout_width="53dp"
-                        android:layout_height="53dp"/>
+                        android:layout_height="53dp"
+                        android:clickable="true"
+                        android:src="@drawable/illust_happy" />
+
                     <TextView
                         style="@style/Text_H7"
-                        android:textColor="@color/Pink"
-                        android:text="@string/illustHappy"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="@string/illustHappy"
+                        android:textColor="@color/Pink" />
                 </LinearLayout>
 
             </LinearLayout>
-
 
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="32dp"
                 android:layout_marginRight="14dp"
-                android:background="#f4f4f4"
-                />
-
+                android:layout_marginBottom="32dp"
+                android:background="#f4f4f4" />
 
 
             <TextView
                 style="@style/Text_H4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
                 android:text="자유롭게 더 기록하기" />
 
             <TextView
                 style="@style/Text_H7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
                 android:text="오늘 느낀 기분을 자유롭게 작성해보세요" />
 
 
@@ -519,23 +551,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="21dp"
-                android:layout_marginRight="20dp">
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="60dp">
 
                 <EditText
                     style="@style/Text_H6"
                     android:layout_width="match_parent"
                     android:layout_height="323dp"
-                    android:background="@color/Beige1"
-                    android:gravity="top"
-                />
+                    android:background="@drawable/rounded_7"
+                    android:backgroundTint="@color/Beige1"
+                    android:gravity="top" />
 
                 <!--TODO 커스텀 해서 따로 xml 파일로 만들기-->
                 <ProgressBar
-                    android:layout_marginBottom="9dp"
-                    android:layout_marginEnd="10dp"
                     android:layout_width="14dp"
                     android:layout_height="14dp"
-                    android:layout_gravity="bottom|right" />
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="9dp" />
             </FrameLayout>
 
 
@@ -543,22 +577,32 @@
 
     </ScrollView>
 
-    <LinearLayout
-        android:orientation="horizontal"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="40dp"
+        android:orientation="horizontal">
 
-       <Switch
-           android:text="공개"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"/>
+        <Switch
+            style="@style/Text_H6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="21dp"
+            android:text="공개"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            style="@style/Text_H6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
             android:clickable="true"
             android:text="임시저장"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
