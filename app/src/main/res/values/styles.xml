@@ -53,7 +53,9 @@
         <item name = "android:textColor">@color/Grey600</item>
     </style>
 
-
-
+    <!--스크롤 커스텀-->
+    <style name="scroll_custom">
+        <item name="android:scrollbarThumbVertical">@drawable/ic_scroll</item>
+    </style>
 
 </resources>

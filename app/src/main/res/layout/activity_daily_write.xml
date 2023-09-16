@@ -17,7 +17,13 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarFadeDuration="0"
+        android:scrollbarSize="2dp"
+        android:scrollbarThumbVertical="@drawable/ic_scroll">
+<!--FIXME 스크롤바 세로 길이는 커스텀이 어려움 -> 페이지 양에 따라 비율로 자동 설정되기 때문에-->
+<!--TODO 스크롤 바 옆의 텍스트 풍선-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -85,20 +91,20 @@
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
-                android:scrollbars="none"
                 android:layout_height="match_parent"
-                android:layout_marginStart="21dp">
+                android:layout_marginStart="21dp"
+                android:scrollbars="none">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                <LinearLayout
-                    android:id="@+id/imageLinearLayout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"></LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/imageLinearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"></LinearLayout>
 
                     <!--FIXME 버튼 디자인 없어서 임의로 진행-->
                     <ImageButton
@@ -109,7 +115,6 @@
                         android:background="@drawable/rounded_7"
                         android:backgroundTint="@color/Beige2"
                         app:srcCompat="@drawable/ic_write" />
-
 
 
                 </LinearLayout>
