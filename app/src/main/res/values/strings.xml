@@ -1,4 +1,27 @@
 <resources>
-<!--TODO : 지금 선에서는 어떠한 것들을 여기에 넣어야 할지 잘 모르겠다-->
+    <!--TODO : 지금 선에서는 어떠한 것들을 여기에 넣어야 할지 잘 모르겠다-->
     <string name="app_name">FOODA</string>
+
+<!--일러스트 이름-->
+    <string name="illustHappy">기쁨</string>
+    <string name="illustAngry">화남</string>
+    <string name="illustCurious">알쏭달쏭</string>
+    <string name="illustSad">슬픔</string>
+    <string name="illustSoso">그럭저럭</string>
+
+<!--Daily Screen-->
+    <string name="tagDailyTime1">#아침</string>
+    <string name="tagDailyTime2">#점심</string>
+    <string name="tagDailyTime3">#저녁</string>
+    <string name="tagDailyTime4">#야식</string>
+    <string name="tagDailyTime5">#간식</string>
+
+    <string name="tagDailyCategory1">#양식</string>
+    <string name="tagDailyCategory2">#한식</string>
+    <string name="tagDailyCategory3">#중식</string>
+    <string name="tagDailyCategory4">#일식</string>
+    <string name="tagDailyCategory5">#기타</string>
+    <string name="tagDailyCategory6">#디저트</string>
+
+
 </resources>
