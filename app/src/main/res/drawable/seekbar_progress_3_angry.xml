@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/seekbar2background"
+        android:drawable="@drawable/seekbar_progress_3_angry_background"/>
+
+    <!--이게 왜 필요한지는 모르겠고 없어도 ㄱㅊ은거 같은데 참고한 블로그에 있어서 일단 두고 나중에 필요 없는거 확정나면 지우겠슴다-->
+    <item android:id="@android:id/progress">
+        <scale
+            android:drawable="@drawable/seekbar_progress_3_angry_background"
+            android:scaleHeight="10%"
+            android:scaleWidth="100%"/>
+    </item>
+
+</layer-list>
