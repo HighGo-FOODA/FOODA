@@ -19,7 +19,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
-        <!--FIXME 스크롤바 세로 길이는 커스텀이 어려움 -> 페이지 양에 따라 비율로 자동 설정되기 때문에 && 항시 노출을 원하는 것이 맞는지-->
         <!--TODO 스크롤 바 옆의 텍스트 풍선-->
 
         <LinearLayout
@@ -103,7 +102,6 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal"></LinearLayout>
 
-                    <!--FIXME 버튼 디자인 없어서 임의로 진행-->
                     <ImageButton
                         android:id="@+id/imageAddButton"
                         android:layout_width="135dp"
@@ -111,7 +109,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/rounded_7"
                         android:backgroundTint="@color/Beige2"
-                        app:srcCompat="@drawable/ic_write" />
+                        app:srcCompat="@drawable/ic_image_add" />
 
 
                 </LinearLayout>
@@ -153,8 +151,8 @@
                 app:chipSpacingVertical="13dp"
                 app:singleLine="false">
 
-                <!--FIXME Chip 디자인 디테일 (마진 같은 거), 그룹 내 정렬 -->
-                <!--FIXME font 스타일 가이드 아님?? 임시로 폰트 페말리 레귤러로 진행-->
+                <!--FIXME Chip 디자인 디테일 (마진 같은 거), 그룹 내 정렬 => 사이즈 통일-->
+                <!--FIXME font 스타일 가이드 아님?? 임시로 폰트 페말리 레귤러로 진행 => 글씨체 14로-->
                 <com.google.android.material.chip.Chip
                     android:layout_width="82dp"
                     android:layout_height="wrap_content"
@@ -233,7 +231,7 @@
                 android:layout_marginLeft="21dp"
                 android:layout_marginRight="20dp">
 
-<!--TODO editText 칸 오버 되는 것에 대해서 칸이 늘어나게 할 것인지. 아니면, 스크롤이 되게 할것인지에 대해서-->
+<!--TODO editText 칸 오버 되는 것에 => 사이즈 확장되도록-->
 <!--FIXME 디자인 : editText 안의 실제 글 입력의 폰트나 사이즈, 색상 괜찮은지-->
                 <EditText
                     style="@style/Text_H6"
