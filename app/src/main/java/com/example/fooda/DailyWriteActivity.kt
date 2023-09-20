@@ -38,7 +38,9 @@ class DailyWriteActivity : AppCompatActivity() {
                 }
             }
 
- 
+            //TODO uri -> image 데일리타임에다가 추가하기
+
+
         binding.imageAddButton.setOnClickListener {
             pickMultipleMedia.launch(
                 PickVisualMediaRequest(
