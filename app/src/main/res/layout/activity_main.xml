@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".demo">
 
     <!--TODO toolbar은 이 coordinat-에서 빠져야..? 없어지지 않는 고정 이므로  ++ include? fragment
     -->
@@ -114,7 +114,6 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:backgroundcolor="@drawable/finalbutton"
                 android:outlineProvider="none"
                 style="@style/Text_H2"
                 android:text="오늘 하루의 총평 쓰러가기 〉"

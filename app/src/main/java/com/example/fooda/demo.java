@@ -14,13 +14,12 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import java.util.Calendar;
 
 public class demo extends Activity {
 
     DatePickerDialog datePickerDialog;//이건 무조건 outer에 있어야 한다.
-    int flagFinal=0;
+    int flagFinal=2;
     AlertDialog dialog;
     LinearLayout layout;
     @Override
@@ -127,7 +126,7 @@ public class demo extends Activity {
         });
 
         //adding new daily
-        ImageButton addNew=(ImageButton) findViewById(R.id.imageAddButton);
+        ImageButton addNew=(ImageButton) findViewById(R.id.fabWrite);
         layout=(LinearLayout) findViewById(R.id.container);
 
         buildDialog();
