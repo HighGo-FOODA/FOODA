@@ -164,6 +164,7 @@ public class demo extends Activity {
     }
 
     private void addCard(String ex) {
+        //FIXME R.id.first 추가
         View view=getLayoutInflater().inflate(R.layout.activity_daily_card, null);
 
         TextView ex2=(TextView) view.findViewById(R.id.titleday);
