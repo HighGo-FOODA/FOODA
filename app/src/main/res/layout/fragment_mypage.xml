@@ -6,14 +6,9 @@
     tools:context=".MypageFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <FrameLayout
-        android:id="@+id/appbarFrameLayout"
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="72dp" />
-
-    <!--이미지 옆에 연필을 눌러서 프로필 변경함-->
-
-
-
+        android:layout_height="match_parent"
+        android:text="마이페이지" />
 
 </FrameLayout>
