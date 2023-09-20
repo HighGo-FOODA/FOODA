@@ -38,7 +38,7 @@ class DailyWriteActivity : AppCompatActivity() {
                 }
             }
 
- 
+
         binding.imageAddButton.setOnClickListener {
             pickMultipleMedia.launch(
                 PickVisualMediaRequest(
